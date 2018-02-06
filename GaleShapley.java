@@ -20,7 +20,7 @@ public class Framework
 	int MenPrefs[][]; // preference list of men (n*n)
 	int WomenPrefs[][]; // preference list of women (n*n)
 
-	ArrayList<MatchedPair> MatchedPairsList; // your output should fill this arraylist which is empty at start
+	ArrayList<MatchedPair> MatchedPairsList; 
 
 	public class MatchedPair
 	{
@@ -107,17 +107,8 @@ public class Framework
 	public Framework(String []Args)
 	{
 		input(Args[0]);
-
-		/* NOTE
-		 * if you want to declare that man x and woman y will get matched in the matching, you can
-		 * write a code similar to what follows:
-		 * MatchedPair pair=new MatchedPair(x,y);
-		 * MatchedPairsList.add(pair);
-		 */
-
-		//YOUR CODE STARTS HERE
 		
-		MatchedPairsList=new ArrayList<MatchedPair>(); // you should put the final stable matching in this array list
+		MatchedPairsList=new ArrayList<MatchedPair>(); 
 		MatchedPair pair=new MatchedPair(1,1);
 		boolean[] WomanIsProposed = new boolean[n]; //initialized to false
 		boolean[] ManIsNotFree = new boolean[n]; //initialized to false
@@ -174,8 +165,6 @@ public class Framework
 			pair=new MatchedPair(i,MarriedCouple[i]);
 			MatchedPairsList.add(pair);
 		}
-
-		//YOUR CODE ENDS HERE
 
 		output(Args[1]);
 
